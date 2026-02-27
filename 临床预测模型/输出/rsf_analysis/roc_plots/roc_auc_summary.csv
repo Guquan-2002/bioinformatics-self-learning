@@ -1,0 +1,10 @@
+"strategy","cohort","time_month","auc"
+"refit","training",6,0.85025955832518
+"refit","training",12,0.858201588814563
+"refit","training",18,0.867343660226533
+"refit","validation",6,0.849251147406839
+"refit","validation",12,0.869402228996165
+"refit","validation",18,0.859986552283036
+"external","validation",6,0.723355851037304
+"external","validation",12,0.734024620118574
+"external","validation",18,0.7011852380543

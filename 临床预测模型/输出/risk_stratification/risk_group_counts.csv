@@ -1,0 +1,10 @@
+"risk_group","n","cohort","prop"
+"Low-risk",909,"All",0.733064516129032
+"Medium-risk",315,"All",0.254032258064516
+"High-risk",16,"All",0.0129032258064516
+"Low-risk",727,"Training",0.732862903225806
+"Medium-risk",253,"Training",0.255040322580645
+"High-risk",12,"Training",0.0120967741935484
+"Low-risk",182,"Validation",0.733870967741935
+"Medium-risk",62,"Validation",0.25
+"High-risk",4,"Validation",0.0161290322580645
