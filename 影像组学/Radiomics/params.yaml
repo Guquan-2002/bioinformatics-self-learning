@@ -1,0 +1,24 @@
+imageType:
+  Original: {}                   # 使用原始影像
+  LoG:
+    sigma: [2.0, 3.0, 4.0, 5.0]  # sigma越大捕捉越粗糙的纹理
+  Wavelet: {}                    # 小波变换
+
+featureClass:
+  firstorder:   # 一阶统计特征
+  shape:        # 形态学特征
+  glcm:         # 灰度共生矩阵
+  glrlm:        # 灰度游程矩阵
+  glszm:        # 灰度区域大小矩阵
+  ngtdm:        # 邻域灰度差矩阵
+  gldm:         # 灰度依赖矩阵
+
+# 你也不想跑了半天发现，你提取的特征不是关于患者疾病的情况，而是拍这张片用的是飞利浦的机器还是GE的机器吧……
+# 这听上去很蠢，但机器就是数据，数据就是机器
+# 俗话说，GIGO，Garbage In, Garbage Out
+setting:
+  binWidth: 25 # 灰度离散化的宽度，单位为 HU，越大越粗糙，越小越细腻
+  resampledPixelSpacing: [1, 1, 1] # 重采样到统一的空间分辨率，单位为毫米，不同片的分辨率可能不同
+  interpolator: sitkBSpline # 重采样时使用的插值方法，适合连续影像数据
+  normalize: true # 对影像进行归一化处理，通常是将像素值缩放到 [0, 1] 范围内，或者进行 z-score 标准化
+  label: 255 # 分割掩膜中表示肿瘤区域的标签值，通常是 255 或 1，具体取决于数据集的标注方式
